@@ -3,7 +3,10 @@ package com.codepath.debuggingchallenges.activities;
 import android.graphics.Color;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import com.codepath.debuggingchallenges.R;
 
@@ -23,6 +26,7 @@ public class ChangeBackgroundActivity extends AppCompatActivity {
     }
 
     private int getNextColor() {
+        Log.d("Gustavo", "Enter getNextColor");
         int newColor = (oldColor == Color.BLUE) ? Color.RED : Color.BLUE;
         oldColor = newColor;
         return newColor;

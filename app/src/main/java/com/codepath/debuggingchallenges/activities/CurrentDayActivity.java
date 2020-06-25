@@ -2,6 +2,8 @@ package com.codepath.debuggingchallenges.activities;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.util.Log;
 import android.widget.TextView;
 
 import com.codepath.debuggingchallenges.R;
@@ -17,10 +19,12 @@ public class CurrentDayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_current_day);
         tvDay = (TextView) findViewById(R.id.tvDay);
-        tvDay.setText(getDayOfMonth());
+        /* Figure it out by searching log message on Google */
+        /* https://stackoverflow.com/questions/11189545/android-android-content-res-resourcesnotfoundexception-string-resource-id-0x */
+        tvDay.setText(Integer.toString(getDayOfMonth()));
     }
 
-    private int getDayOfMonth() {
+    public int getDayOfMonth() {
         Calendar cal = Calendar.getInstance();
         return cal.get(Calendar.DAY_OF_MONTH);
     }

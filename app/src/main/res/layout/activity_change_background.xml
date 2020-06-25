@@ -18,7 +18,6 @@
         android:text="@string/go"
         android:onClick="onGoClick"/>
 
-
     <View
         android:id="@+id/viewDisplay"
         android:layout_width="match_parent"

@@ -7,13 +7,13 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 public class Movie {
-    private String title;
-    private String posterUrl;
-    private double rating;
+    public String title;
+    public String posterUrl;
+    public double rating;
 
     public Movie(JSONObject jsonObject) throws JSONException {
         this.posterUrl = jsonObject.getString("poster_path");
-        this.title = jsonObject.getString("original-title");
+        this.title = jsonObject.getString("original_title");
         this.rating = jsonObject.getDouble("vote_average");
     }
 

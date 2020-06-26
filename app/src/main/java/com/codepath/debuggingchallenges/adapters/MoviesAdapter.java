@@ -18,8 +18,14 @@ import com.codepath.debuggingchallenges.models.Movie;
 import java.util.List;
 
 public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder> {
-
+    public Context context;
     private List<Movie> movies;
+
+    /* Default constructor for passing in necessary objects */
+    public MoviesAdapter(Context context, List<Movie> movies) {
+        this.context = context;
+        this.movies = movies;
+    }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         // only needed because we need to set the background color
@@ -40,13 +46,9 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
         }
     }
 
-    public MoviesAdapter(List<Movie> movies) {
-        this.movies = movies;
-    }
-
     @Override
     public int getItemCount() {
-        return 0;
+        return movies.size();
     }
 
     @NonNull
